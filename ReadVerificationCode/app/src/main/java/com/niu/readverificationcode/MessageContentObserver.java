@@ -46,7 +46,7 @@ public class MessageContentObserver extends ContentObserver {
                 String body = c.getString(c.getColumnIndex("body")); // 短信内容
                 if (!TextUtils.isEmpty(address)&&(address.startsWith("1069"))
                         &&
-                        ((!TextUtils.isEmpty(body)&&body.contains("安心贷")))){
+                        ((!TextUtils.isEmpty(body)&&body.contains("***")))){//*为你的关键字
                     Pattern pattern = Pattern.compile("(\\d{6})");//正则表达式匹配验证码
                     Matcher matcher = pattern.matcher(body);
                     if (matcher.find()) {
